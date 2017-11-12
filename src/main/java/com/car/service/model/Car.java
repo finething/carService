@@ -1,12 +1,13 @@
+/**
+ * This is the car 
+ */
 package com.car.service.model;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 @Entity
 public class Car {
@@ -18,6 +19,7 @@ public class Car {
 	private String code;
 	@ManyToOne(cascade=CascadeType.ALL)	
 	//@JsonBackReference	
+	
 	private Driver driver;
 	
 	
